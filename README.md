@@ -109,4 +109,3 @@ rules:
 # 🛠️ Notes
 - Adjust `--perc_threshold` or `--smooth_window` if compliance fails.
 - Virtual environment recommended to avoid dependency conflicts.
-- Judges can re-run with different params for sensitivity testing.
