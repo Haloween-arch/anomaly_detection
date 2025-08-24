@@ -50,22 +50,22 @@ steps:
       command: pip freeze > requirements.txt
 
 # ▶️ Running the Pipeline
-example_command: |
+- example_command: 
   python main.py --input data/input.csv --output output/anomalies.csv --plot --report --timestamp_col auto --train_start "2004-01-01 00:00" --train_end "2004-01-05 23:59" --analysis_start "2004-01-01 00:00" --analysis_end "2004-01-19 07:59"
 
 # 🎯 Key Arguments
 flags:
-  --input: "Path to input CSV"
-  --output: "Path to output CSV"
-  --plot: "Show plots interactively"
-  --report: "Generate PDF report"
-  --timestamp_col: "Specify timestamp column (or auto)"
-  --train_start / --train_end: "Training period (normal baseline)"
-  --analysis_start / --analysis_end: "Full analysis window"
-  --perc_threshold: "Percentile threshold for anomaly detection (default 0.97)"
-  --smooth_window: "Smoothing window size (default 5)"
-  --top_k: "Number of top features (default 7)"
-  --min_contrib: "Minimum % contribution (default 1.0)"
+  - input: "Path to input CSV"
+  - output: "Path to output CSV"
+  - plot: "Show plots interactively"
+  - report: "Generate PDF report"
+  - timestamp_col: "Specify timestamp column (or auto)"
+  - train_start / --train_end: "Training period (normal baseline)"
+  - analysis_start / --analysis_end: "Full analysis window"
+  - perc_threshold: "Percentile threshold for anomaly detection (default 0.97)"
+  - smooth_window: "Smoothing window size (default 5)"
+  - top_k: "Number of top features (default 7)"
+  - min_contrib: "Minimum % contribution (default 1.0)"
 
 # 📊 Outputs
 - anomalies.csv → with columns:
